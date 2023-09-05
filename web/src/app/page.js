@@ -15,7 +15,7 @@ export default function Home() {
             </h2>
 
             <p class="hidden text-gray-500 md:mt-4 md:block text-justify ">
-              Trabajo de relevamiento, diagnóstico, y analisis estadistico de Talles y Pesos de la poblacion infaltil en barrios populares.
+              Trabajo de relevamiento, diagnóstico, y análisis estadistico de Talles y Pesos en la población infaltil de barrios populares.
             </p>
             <p class="hidden text-gray-500 md:mt-4 md:block text-justify ">
               Coordinado por la Universidad Popular, Barrios de Pie y promotorxs de salud del área de Salud Colectiva.
