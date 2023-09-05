@@ -1,0 +1,16 @@
+version: "3"
+services:
+  web:
+    container_name: SIGBAS-UnvPop
+    image: node:18-alpine
+    restart: unless-stopped
+    working_dir: /usr/src/app
+    command: sh -c "yarn install && yarn run dev"
+    env_file: .env
+    environment:
+      NEXT_TELEMETRY_DISABLED: ${NEXT_TELEMETRY_DISABLED}
+      PORT: ${NEXT_PORT}
+    volumes:
+      - ./web:/usr/src/app
+    ports:
+      - "3000:3000"
