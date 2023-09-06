@@ -3,7 +3,7 @@ Desarrollo de software conjunto de la Secretaria de Inclusión, Género, Bienest
 
 ## Para levantar dev ##
 - Contar con un entorno con Docker instalado: [+info áca](https://docs.docker.com/get-docker/)
-- Copiar el archivo .env (pedirlo) en la carpeta raiz
+- renombrar el archivo ".env.template" a ".env" en la carpeta raiz
 - Abrir una terminal ubicada en la carpeta raiz
 - Para arrancar localmente el proyecto, ejecutar en la terminal:
 ````Bash
