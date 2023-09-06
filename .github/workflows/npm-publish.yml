@@ -23,6 +23,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm run lint
-    - run: npm run build --if-present
+        cache: 'yarn'
+    - name: Install dependencies 📦
+      run: yarn install --frozen-lockfile
+    - run: yarn run lint
+    - run: yarn run build --if-present
