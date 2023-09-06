@@ -12,6 +12,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./app
     strategy:
       matrix:
         node-version: [18.x]
@@ -26,7 +29,8 @@ jobs:
         cache: 'yarn'
     
     - name: Install dependencies 📦
-      working-directory: ./web
       run: yarn install --frozen-lockfile
+    
+    - name: Lint & Build
       run: yarn run lint
       run: yarn run build --if-present
