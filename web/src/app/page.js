@@ -11,7 +11,7 @@ export default function Home() {
             className="mx-auto max-w-xl min-h-full text-center"
           >
             <h2 className="text-2xl font-bold text-gray-900 md:text-3xl text-left">
-              Emergencia Alimentaria
+              Emergencia Alimentariacsaczdvzsvc cdsmvcns,mn
             </h2>
 
             <p className="hidden text-gray-500 md:mt-4 md:block text-justify ">
