@@ -3,8 +3,6 @@ import Link from "next/link";
 export default function Footer() {
     return (
         <footer className="bg-violet-university">
-            <Link href={"/Lolo"}> link bobo
-            </Link>
             <div className="max-w-2xl mx-auto text-white py-4">
                 <div className="text-center">
                     <div className="flex justify-center my-4">
