@@ -1,9 +1,12 @@
 // import Image from 'next/image'
+import Navbar from './components/Home/Navbar'
+import Footer from './components/Home/Footer'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-white flex flex-col">
-      <header className="flex fixed top-0 flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-violet-university text-sm py-4">
+      <Navbar />
+      {/* <header className="flex fixed top-0 flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-violet-university text-sm py-4">
         <nav className="max-w-[80rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between" aria-label="Global">
           <a href="https://upbarriosdepie.com.ar/" target="_blank">
             <svg className="h-8 w-8 text-gray-600 dark:text-gray-400"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -39,7 +42,7 @@ export default function Home() {
             </div>
           </div>
         </nav>
-      </header>
+      </header> */}
       <section
         className="flex-1 overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
       >
@@ -76,7 +79,7 @@ export default function Home() {
         />
       </section>
 
-      <footer className="bg-violet-university">
+      {/* <footer className="bg-violet-university">
         <div className="max-w-2xl mx-auto text-white py-10">
             <div className="text-center">
                 <div className="flex justify-center my-10">
@@ -119,7 +122,8 @@ export default function Home() {
                 <p className="order-2 md:order-1 mt-8 md:mt-0 mx-auto my-auto"> &copy; FIUBA, 2023. </p>
             </div>
         </div>
-    </footer>
+    </footer> */}
+      <Footer />
     </main>
   )
 }
