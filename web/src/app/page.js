@@ -13,15 +13,15 @@ export default function Home() {
           <div
             className="mx-auto max-w-xl min-h-full text-center"
           >
-            <h2 className="text-2xl font-bold text-gray-900 md:text-3xl text-left">
-              Emergencia Alimentaria
+            <h2 className="text-2xl font-poppins font-bold uppercase text-gray-900 md:text-3xl text-center pb-8 sm:pb-0">
+            Detección de malnutrición infantil
             </h2>
 
-            <p className="hidden text-gray-500 md:mt-4 md:block text-justify ">
-              Trabajo de relevamiento, diagnóstico, y análisis estadistico de Talles y Pesos en la población infaltil de barrios populares.
+            <p className="hidden font-poppins font-medium text-gray-500 sm:mt-4 sm:block text-justify ">
+            Trabajo de relevamiento, diagnóstico y análisis estadístico de índices antropométricos en población infantil.
             </p>
-            <p className="hidden text-gray-500 md:mt-4 md:block text-justify ">
-              Coordinado por la Universidad Popular, Barrios de Pie y promotorxs de salud del área de Salud Colectiva.
+            <p className="hidden font-Encode-Sans font-medium text-gray-500 sm:mt-4 sm:block text-justify ">
+            Coordinado por promotorxs del área de Salud Colectiva y la Universidad Popular Barrios de Pie, con apoyo técnico de Facultad de Ingeniería de la UBA.
             </p>
 
             <div className="mt-4 md:mt-8">
@@ -38,7 +38,7 @@ export default function Home() {
         <img
           alt="infancias"
           src="/infancias.jpg"
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]"
+          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)]"
         />
       </section>
       <Footer />
