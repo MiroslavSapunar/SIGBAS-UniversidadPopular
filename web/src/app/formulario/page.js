@@ -27,7 +27,9 @@ export default function FormPageOne() {
       }}
       className="min-h-screen flex flex-col items-left justify-center"
     >
-      <form name="form" id ="registrationForm" action="/formulario" method="get" onSubmit={validateForm}>
+        <h2 className="text-3xl text-violet-university font-bold mb-4">Formulario para menores de 2 años</h2>
+
+      <form name="form" id ="registrationForm" action="/formulario1" method="get" onSubmit={validateForm}>
         <div class="formGroup rounded p-4 mb-4">
           <label for="firstName">Nombre</label>
           <div class="flex items-center">
@@ -74,8 +76,7 @@ export default function FormPageOne() {
         <div class ="formGroup rounded p-4 mb-4">
           <label for="birthday">Fecha de nacimiento</label>
           <div class="flex items-center">
-          <input 
-                  
+          <input  
                   type="date" 
                   name="birthday" 
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
@@ -100,14 +101,21 @@ export default function FormPageOne() {
           <div class="flex items-center">
           <input 
                   required
-                  min="3"
+                  min="0"
                   type="number" 
                   name="weight" 
                   id="weight" 
-                  onChange={(e) => setWeight(e.target.value)}
-                  value={weight}
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
+          </div>
+          <div class="flex items-center">
+          <select 
+                  id="weightMetric" 
+                  name="weightMetric" 
+          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
+                <option>gramos</option>
+                <option>kilogramos</option>
+              </select>
           </div>
           <div class ="error text-red-700 py-2"></div>
         </div>
@@ -116,14 +124,21 @@ export default function FormPageOne() {
           <div class="flex items-center">
           <input 
                   required
-                  min="50"
+                  min="0"
                   type="number" 
                   name="height" 
                   id="height" 
-                  onChange={(e) => setHeight(e.target.value)}
-                  value={height}
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
+          </div>
+          <div class="flex items-center">
+          <select 
+                  id="heightMetric" 
+                  name="heightMetric" 
+          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
+                <option>metros</option>
+                <option>centimetros</option>
+              </select>
           </div> 
           <div class ="error text-red-700 py-2"></div>
         </div>
