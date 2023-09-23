@@ -1,6 +1,24 @@
 "use client"
+import { useState } from 'react';
 
-export default function FormPage() {
+export default function FormPageOne() {
+  
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+
+  const validateForm = () => {
+    if (!firstName.match(/^[A-Za-z]+$/)) {
+      alert('Solo letras para nombre');
+      //la ñ no es valido
+    }if (!lastName.match(/^[A-Za-z]+$/)) {
+      alert('Solo letras para apellido');
+      //la ñ no es valido
+    }else {
+      alert('Formulario válido');
+    }
+  };
 
     return (
       <div
@@ -9,7 +27,7 @@ export default function FormPage() {
       }}
       className="min-h-screen flex flex-col items-left justify-center"
     >
-      <form id ="registrationForm">
+      <form name="form" id ="registrationForm" action="/formulario" method="get" onSubmit={validateForm}>
         <div class="formGroup rounded p-4 mb-4">
           <label for="firstName">Nombre</label>
           <div class="flex items-center">
@@ -18,6 +36,8 @@ export default function FormPage() {
                 type="text"
                 name="firstName" 
                 id="firstName" 
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
                 class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
           />
           </div>
@@ -31,6 +51,8 @@ export default function FormPage() {
                   type="text" 
                   name="lastName" 
                   id="lastName" 
+                  onChange={(e) => setLastName(e.target.value)}
+                  value={lastName}
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
           </div>
@@ -53,7 +75,7 @@ export default function FormPage() {
           <label for="birthday">Fecha de nacimiento</label>
           <div class="flex items-center">
           <input 
-                  required
+                  
                   type="date" 
                   name="birthday" 
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
@@ -78,9 +100,12 @@ export default function FormPage() {
           <div class="flex items-center">
           <input 
                   required
+                  min="3"
                   type="number" 
                   name="weight" 
                   id="weight" 
+                  onChange={(e) => setWeight(e.target.value)}
+                  value={weight}
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
           </div>
@@ -91,9 +116,12 @@ export default function FormPage() {
           <div class="flex items-center">
           <input 
                   required
+                  min="50"
                   type="number" 
                   name="height" 
                   id="height" 
+                  onChange={(e) => setHeight(e.target.value)}
+                  value={height}
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
           </div> 
@@ -102,8 +130,7 @@ export default function FormPage() {
         <div class ="formGroup rounded p-4 mb-4">
           <label for="surveyDay">Fecha de relevamiento</label>
           <div class="flex items-center">
-          <input 
-                  required
+          <input   
                   type="date" 
                   name="surveyDay" 
                   id="surveyDay" 
@@ -149,7 +176,6 @@ export default function FormPage() {
           <label for="district">Distrito</label>
           <div class="flex items-center">
           <input 
-                  required
                   type="text" 
                   name="district" 
                   id="district" 
@@ -161,7 +187,6 @@ export default function FormPage() {
           <label for="diningHall">Comedor/Merendero</label>
           <div class="flex items-center">
           <input 
-                  required
                   type="text" 
                   name="diningHall" 
                   id="diningHall" 
@@ -172,24 +197,25 @@ export default function FormPage() {
         <div class ="formGroup rounded p-4 mb-4">
           <label for="formNumber">Número de planilla</label>
           <div class="flex items-center">
-          <input 
-                  required
+          <input   
                   type="number" 
                   name="formNumber" 
                   id="formNumber" 
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
           </div>  
+          
         </div>
         <button 
             type="submit" 
-            class="px-8 py-2 mt-4 bg-green 400 w-full rounded-full  text-white shadow-lg">
+            class="px-8 py-2 mt-4 bg-green 400 w-full rounded-full  text-white shadow-lg"
+            >
           Registrar
         </button>
-        <script src="/dataValidation.js"> </script> 
       </form> 
-      </div> 
+      </div>
       
     )
+    
   }
   
