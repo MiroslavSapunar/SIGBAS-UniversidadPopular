@@ -2,28 +2,28 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-violet-university">
-            <div className="text-white py-4 pt-0 text-center bottom-0 left-0 right-0">
-                    <div className="grid grid-cols-3 md:grid-cols-4 justify-center my-4">
+        <footer className="bg-violet-university w-full">
+            <div className="text-white text-center">
+                    <div className="grid grid-cols-3 md:grid-cols-4 justify-center pt-1">
                         <div className="text-left col-span-1 justify-center justify-self-center">
                             <img
                                 alt="PopularUniversity"
                                 src="/PopularUniversity.png"
-                                className="h-20 w-20 sm:h-40 sm:w-40 max-w-lg rounded-l  object-contain"
+                                className="h-20 w-20 sm:h-30 sm:w-30 max-w-lg object-contain"
                             />
                         </div>
                         <div className="text-left col-span-1 justify-center justify-self-center">
                             <img
                                 alt="WeAre"
                                 src="/WeAre.png"
-                                className="h-20 w-20 sm:h-40 sm:w-40 max-w-lg rounded-l  object-contain"
+                                className="h-20 w-20 sm:h-30 sm:w-30 max-w-lg  object-contain"
                             />
                         </div>
                         <div className="text-left col-span-1 justify-center justify-self-center">
                             <img
                                 alt="FIUBA"
                                 src="/FIUBA.png"
-                                className="h-20 w-20 sm:h-40 sm:w-40 max-w-lg rounded-l object-contain invert"
+                                className="h-20 w-20 sm:h-30 sm:w-30 max-w-lg object-contain invert"
                             />
                         </div>
                   <div className="flex col-span-3  md:col-span-1 justify-center items-center justify-center justify-self-center">
@@ -39,8 +39,8 @@ export default function Footer() {
                                 <div className="flex-1 border-4 border-solid rounded-full bg-white ml-3"><svg className="h-4 w-4 text-violet-university" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />  <polyline points="22,6 12,13 2,6" /></svg></div></a>
                         </div>
                     </div>
-                <div className="mt-2 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
-                    <p className="order-2 md:order-1 mt-4 sm:mt-8 md:mt-0 mx-auto my-auto"> &copy; FIUBA, 2023. </p>
+                <div className="my-1 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
+                    <p className="order-2 md:order-1 mt-4 sm:mt-8 md:mt-0 mx-auto my-auto"> &copy; Facultad de Ingeniría - UBA, 2023. </p>
                 </div>
             </div>
         </footer>
