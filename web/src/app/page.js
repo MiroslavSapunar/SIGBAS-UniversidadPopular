@@ -7,17 +7,17 @@ export default function Home() {
     <main className="min-h-screen bg-white flex flex-col">
       <Navbar />
       <section
-        className="flex-1 overflow-hidden mt-20 sm:mt-0 bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center"
+        className="flex-1 overflow-hidden mt-20 md:mt-0 bg-gray-50 lg:grid lg:grid-cols-2 md:items-center  "
       >
-        <div className="flex p-8 md:p-12 lg:px-16 lg:py-24 items-center">
+        <div className="flex p-8 md:p-12 lg:px-16 lg:py-24 items-center order-2 lg:order-1 ">
           <div
             className="mx-auto max-w-xl min-h-full text-center"
           >
-            <h2 className="text-2xl font-poppins font-bold uppercase text-gray-900 md:text-3xl text-center pb-8 sm:pb-0">
-            Detección de malnutrición infantil
+            <h2 className="text-2xl font-poppins font-bold uppercase text-gray-900 md:text-3xl  text-right lg:text-justify pb-8 sm:pb-0">
+            Relevamiento en territorio de datos percentiles infantiles
             </h2>
 
-            <p className="hidden font-poppins font-medium text-gray-500 sm:mt-4 sm:block text-justify ">
+            <p className="hidden font-poppins font-medium text-gray-500 sm:mt-4 sm:block  text-right md:text-justify ">
             Trabajo de relevamiento, diagnóstico y análisis estadístico de índices antropométricos en población infantil.
             </p>
             <p className="hidden font-Encode-Sans font-medium text-gray-500 sm:mt-4 sm:block text-justify ">
@@ -38,7 +38,7 @@ export default function Home() {
         <img
           alt="infancias"
           src="/infancias.jpg"
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)]"
+          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-tr-[30px] md:h-[calc(100%_-_4rem)]"
         />
       </section>
       <Footer />
