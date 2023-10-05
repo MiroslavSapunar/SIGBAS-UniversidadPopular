@@ -12,9 +12,9 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
-    colors: {
-      'violet-university': '#4D37B7',
+      colors: {
+        'violet-university': '#4D37B7',
+      },
     },
   },
   plugins: [],
