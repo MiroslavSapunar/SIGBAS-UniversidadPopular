@@ -23,137 +23,16 @@ export default function FormPageOne() {
     return (
       <div
       style={{
-        backgroundColor:'purple',
+        backgroundColor:'#4D37B7',
       }}
-      className="min-h-screen flex flex-col items-left justify-center"
+      className="max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800"
     >
-        <h2 className="text-3xl text-violet-university font-bold mb-4">Formulario para menores de 2 años</h2>
+
+        <h2 className="text-3xl text-white font-bold mb-4">Formulario</h2>
 
       <form name="form" id ="registrationForm" action="/formulario1" method="get" onSubmit={validateForm}>
-        <div class="formGroup rounded p-4 mb-4">
-          <label for="firstName">Nombre</label>
-          <div class="flex items-center">
-          <input
-                required
-                type="text"
-                name="firstName" 
-                id="firstName" 
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstName}
-                class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-          />
-          </div>
-          <div class ="error text-red-700 px-4 py-2"></div>
-        </div>
-        <div class="formGroup rounded p-4 mb-4">
-          <label for="lastName">Apellido</label>
-          <div class="flex items-center">
-          <input 
-                  required
-                  type="text" 
-                  name="lastName" 
-                  id="lastName" 
-                  onChange={(e) => setLastName(e.target.value)}
-                  value={lastName}
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>
-          <div class ="error text-red-700 py-2"></div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="dni">DNI</label>
-          <div class="flex items-center">
-          <input 
-                  required
-                  type="number" 
-                  name="dni" 
-                  id="dni" 
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>
-          <div class ="error text-red-700 py-2"></div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="birthday">Fecha de nacimiento</label>
-          <div class="flex items-center">
-          <input  
-                  type="date" 
-                  name="birthday" 
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>  
-          <div class ="error text-red-700 py-2"></div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="sex" >Sexo</label>
-          <div class="flex items-center">
-          <select 
-                  id="sex" 
-                  name="sex" 
-          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
-                <option>Masculino</option>
-                <option>Femenino</option>
-              </select>
-          </div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="weight">Peso</label>
-          <div class="flex items-center">
-          <input 
-                  required
-                  min="0"
-                  type="number" 
-                  name="weight" 
-                  id="weight" 
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>
-          <div class="flex items-center">
-          <select 
-                  id="weightMetric" 
-                  name="weightMetric" 
-          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
-                <option>gramos</option>
-                <option>kilogramos</option>
-              </select>
-          </div>
-          <div class ="error text-red-700 py-2"></div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="height">Talla</label>
-          <div class="flex items-center">
-          <input 
-                  required
-                  min="0"
-                  type="number" 
-                  name="height" 
-                  id="height" 
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>
-          <div class="flex items-center">
-          <select 
-                  id="heightMetric" 
-                  name="heightMetric" 
-          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
-                <option>metros</option>
-                <option>centimetros</option>
-              </select>
-          </div> 
-          <div class ="error text-red-700 py-2"></div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="surveyDay">Fecha de relevamiento</label>
-          <div class="flex items-center">
-          <input   
-                  type="date" 
-                  name="surveyDay" 
-                  id="surveyDay" 
-                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
-            />
-          </div>
-        </div>
-        <div class ="formGroup rounded p-4 mb-4">
+      <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+      <div class ="formGroup sm:col-span-2 sm:col-start-1">
           <label for="province">Provincia</label>
           <div class="flex items-center">
           <select 
@@ -187,7 +66,7 @@ export default function FormPageOne() {
               </select>
           </div> 
         </div>
-        <div class ="formGroup rounded p-4 mb-4">
+        <div class ="formGroup sm:col-span-2">
           <label for="district">Distrito</label>
           <div class="flex items-center">
           <input 
@@ -198,7 +77,18 @@ export default function FormPageOne() {
             />
           </div>   
         </div>
-        <div class ="formGroup rounded p-4 mb-4">
+        <div class ="formGroup sm:col-span-2">
+          <label for="surveyDay">Fecha de relevamiento</label>
+          <div class="flex items-center">
+          <input   
+                  type="date" 
+                  name="surveyDay" 
+                  id="surveyDay" 
+                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
+            />
+          </div>
+        </div>
+        <div class ="formGroup sm:col-span-3">
           <label for="diningHall">Comedor/Merendero</label>
           <div class="flex items-center">
           <input 
@@ -209,8 +99,8 @@ export default function FormPageOne() {
             />
           </div> 
         </div>
-        <div class ="formGroup rounded p-4 mb-4">
-          <label for="formNumber">Número de planilla</label>
+        <div class ="formGroup sm:col-span-3">
+          <label for="formNumber">Número de planilla/hoja</label>
           <div class="flex items-center">
           <input   
                   type="number" 
@@ -219,7 +109,105 @@ export default function FormPageOne() {
                   class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
             />
           </div>  
-          
+        </div>
+        <div class="formGroup sm:col-span-3">
+          <label for="firstName">Nombre</label>
+          <div class="mt-2">
+          <input
+                required
+                type="text"
+                name="firstName" 
+                id="firstName" 
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
+                class= "rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400"
+          />
+          </div>
+          <div class ="error text-red-700 px-4 py-2"></div>
+        </div>
+        <div class="formGroup sm:col-span-3">
+          <label for="lastName">Apellido</label>
+          <div class="text-gray-700 dark:text-gray-200">
+          <input 
+                  required
+                  type="text" 
+                  name="lastName" 
+                  id="lastName" 
+                  onChange={(e) => setLastName(e.target.value)}
+                  value={lastName}
+                  class= "rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400"
+            />
+          </div>
+          <div class ="error text-red-700 py-2"></div>
+        </div>
+        <div class ="formGroup sm:col-span-3">
+          <label for="sex" >Sexo(nacimiento)</label>
+          <div class="flex items-center">
+          <select 
+                  id="sex" 
+                  name="sex" 
+          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
+                <option>Masculino</option>
+                <option>Femenino</option>
+              </select>
+          </div>
+        </div>
+        <div class ="formGroup sm:col-span-3">
+          <label for="birthday">Fecha de nacimiento</label>
+          <div class="flex items-center">
+          <input  
+                  type="date" 
+                  name="birthday" 
+                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
+            />
+          </div>  
+          <div class ="error text-red-700 py-2"></div>
+        </div>
+        <div class ="formGroup sm:col-span-3">
+          <label for="weight">Peso</label>
+          <div class="flex items-center">
+          <input 
+                  required
+                  min="0"
+                  type="number" 
+                  name="weight" 
+                  id="weight" 
+                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
+            />
+          </div>
+          <div class="flex items-center">
+          <select 
+                  id="weightMetric" 
+                  name="weightMetric" 
+          class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400">
+                <option>gramos</option>
+                <option>kilogramos</option>
+              </select>
+          </div>
+          <div class ="error text-red-700 py-2"></div>
+        </div>
+        <div class ="formGroup sm:col-span-3">
+          <label for="height">Talla</label>
+          <div class="flex items-center">
+          <input 
+                  required
+                  min="0"
+                  type="number" 
+                  name="height" 
+                  id="height" 
+                  class="rounded-md border px-4 py-2 w-half focus:outline-none text-gray-600 focus:border-yellow-400" 
+            />
+          </div>
+          <div class="flex items-center">
+          <select 
+                  id="heightMetric" 
+                  name="heightMetric" 
+          class="rounded-md border px-4 py-2 w-half focus:outline-white text-gray-600 focus:border-yellow-400">
+                <option>metros</option>
+                <option>centimetros</option>
+              </select>
+          </div> 
+          <div class ="error text-red-700 py-2"></div>
         </div>
         <button 
             type="submit" 
@@ -227,6 +215,7 @@ export default function FormPageOne() {
             >
           Registrar
         </button>
+        </div>
       </form> 
       </div>
       
