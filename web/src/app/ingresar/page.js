@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from 'react';
+import Footer from 'src/app/components/Home/Footer'
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -76,6 +77,8 @@ export default function LoginPage() {
         </div>
         <p className="mt-4 text-gray-600">{message}</p>
       </div>
+        <Footer />
     </div>
+    
   );
 }
