@@ -27,7 +27,7 @@ export default function LoginPage() {
     <div
       className="h-screen bg-cover bg-no-repeat bg-center bg-[url('/fondologin.jpg')] flex flex-col items-center"
     >
-      <div className="bg-white rounded-lg p-10 my-auto text-center bg-opacity-90 w-full md:w-1/3">
+      <div className="bg-white rounded-lg p-10 my-auto text-center bg-opacity-90 w-3/4 lg:w-1/3">
         <h2 className="text-3xl text-violet-university font-bold mb-4">Iniciar Sesión</h2>
         <div className="rounded p-4 mb-4">
           <input
