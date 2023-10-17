@@ -62,6 +62,8 @@ export default function LoginPage() {
             )}
           </button>
         </div>
+        <p className="mt-4 text-gray-600">{message}</p>
+
         <div onClick={handleLogin} className="mt-4 md:mt-8">
           <a
             className="inline-block rounded bg-violet-university px-12 py-3 text-sm font-medium text-white transition hover:bg-[#2e1d82] focus:outline-none focus:ring focus:ring-yellow-400"
@@ -69,7 +71,9 @@ export default function LoginPage() {
             Ingresar
           </a>
         </div>
-        <p className="mt-4 text-gray-600">{message}</p>
+        <a href="/" className=" text-violet-university text-lg underline mt-3 ">
+          Ir a la página principal
+        </a>
       </div>
       <Footer />
 
