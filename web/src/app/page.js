@@ -2,6 +2,8 @@
 import Navbar from './components/Home/Navbar'
 import Footer from './components/Home/Footer'
 import Link from 'next/link'
+import Image from 'next/image'
+import kidsPhoto from '../../public/infancias.jpg'
 
 export default function Home() {
   return (
@@ -14,7 +16,7 @@ export default function Home() {
           <div
             className="mx-auto max-w-xl min-h-full text-center"
           >
-            <h2 className="text-2xl font-poppins font-bold uppercase text-gray-900 md:text-3xl  text-right lg:text-justify pb-8 sm:pb-0">
+            <h2 className="text-2xl font-poppins font-bold uppercase text-gray-900 md:text-3xl  text-left lg:text-justify pb-8 sm:pb-0">
               Relevamiento en territorio de datos percentiles infantiles
             </h2>
 
@@ -34,11 +36,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        {/* TODO. change this img html tag to Next/Image  */}
-        <img
-          alt="infancias"
-          src="/infancias.jpg"
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-tr-[30px] md:h-[calc(100%_-_3rem)]"
+        <Image
+          quality={85}
+          className=' object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-tr-[30px] md:h-[calc(100%_-_3rem)]'
+          alt='infancias'
+          src={kidsPhoto}
         />
       </section>
       <Footer />

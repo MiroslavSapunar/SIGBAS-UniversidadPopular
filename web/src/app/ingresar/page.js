@@ -1,8 +1,10 @@
 "use client"
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import Footer from 'src/app/components/Home/Footer'
+import kidsPhoto from '../../../public/fondologin.jpg'
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -26,8 +28,22 @@ export default function LoginPage() {
 
   return (
     <div
-      className="h-screen bg-cover bg-no-repeat bg-center bg-[url('/fondologin.jpg')] flex flex-col items-center"
+      className="h-screen flex flex-col items-center"
     >
+      <Image
+        quality={85}
+        placeholder="blur"
+        fill
+        // sizes="100vw"
+        objectFit='cover'
+        objectPosition='center'
+        style={{
+          zIndex: -1
+        }}
+        alt='infancias dibujando '
+        src={kidsPhoto}
+
+      />
       <div className="bg-white rounded-lg p-10 my-auto text-center bg-opacity-90 w-3/4 lg:w-1/3">
         <h2 className="text-3xl text-violet-university font-bold mb-4">Iniciar Sesión</h2>
         <div className="rounded p-4">
