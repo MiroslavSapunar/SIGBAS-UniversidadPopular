@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import { useState } from 'react';
 import Footer from 'src/app/components/Home/Footer'
 
@@ -29,7 +30,7 @@ export default function LoginPage() {
     >
       <div className="bg-white rounded-lg p-10 my-auto text-center bg-opacity-90 w-3/4 lg:w-1/3">
         <h2 className="text-3xl text-violet-university font-bold mb-4">Iniciar Sesión</h2>
-        <div className="rounded p-4 mb-4">
+        <div className="rounded p-4">
           <input
             type="text"
             placeholder="Nombre de Usuario"
@@ -38,7 +39,7 @@ export default function LoginPage() {
             className="border px-4 py-2 w-full focus:outline-none text-gray-600 focus:border-yellow-400"
           />
         </div>
-        <div className="relative rounded p-4 mb-4">
+        <div className="relative rounded p-4 ">
           <input
             type={showPassword ? 'text' : 'password'}
             placeholder="Contraseña"
@@ -62,18 +63,27 @@ export default function LoginPage() {
             )}
           </button>
         </div>
-        <p className="mt-4 text-gray-600">{message}</p>
+        <div className="text-gray-600 p-1 text-xs lg:text-base h-8 ">
+          <p >{message}</p>
+        </div>
 
-        <div onClick={handleLogin} className="mt-4 md:mt-8">
-          <a
+        <div className="py-1">
+          <button
+            onClick={handleLogin}
             className="inline-block rounded bg-violet-university px-12 py-3 text-sm font-medium text-white transition hover:bg-[#2e1d82] focus:outline-none focus:ring focus:ring-yellow-400"
           >
             Ingresar
-          </a>
+          </button>
         </div>
-        <a href="/" className=" text-violet-university text-lg underline mt-3 ">
-          Ir a la página principal
-        </a>
+        <div>
+
+          <Link
+            href="/"
+            className=" text-violet-university text-lg underline"
+          >
+            Ir a la página principal
+          </Link>
+        </div>
       </div>
       <Footer />
 
