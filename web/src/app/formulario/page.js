@@ -211,7 +211,7 @@ export default function FormPageOne() {
               type="submit"
               class="px-8 py-2 mt-4 bg-violet-university 400 w-full rounded-md text-white shadow-lg"
             >
-              Registrar
+            Registrar
             </button>
           </div>
         </form>
