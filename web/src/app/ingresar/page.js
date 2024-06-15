@@ -3,7 +3,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
-import Footer from 'src/app/components/Home/Footer'
+import Footer from '../components/Home/Footer';
+import NavBar from '../components/Home/Navbar';
 import kidsPhoto from '../../../public/fondologin.jpg'
 
 export default function LoginPage() {
@@ -30,6 +31,7 @@ export default function LoginPage() {
     <div
       className="h-screen flex flex-col items-center"
     >
+      <NavBar/>
       <Image
         quality={85}
         placeholder="blur"
