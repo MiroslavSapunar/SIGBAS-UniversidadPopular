@@ -3,6 +3,9 @@
 up:
 	docker compose up -d
 
+shell:
+	docker exec -it Front sh
+
 logs:
 	docker compose logs -f
 
