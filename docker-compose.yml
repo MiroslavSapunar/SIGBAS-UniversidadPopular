@@ -7,7 +7,7 @@ services:
     working_dir: /usr/src/app
     # command: sh -c "yarn install && yarn run dev"
     command: sh -c "yarn run dev"
-    env_file: .env
+    # env_file: .env
     environment:
       NEXT_TELEMETRY_DISABLED: ${NEXT_TELEMETRY_DISABLED}
       PORT: ${NEXT_PORT}
@@ -24,7 +24,7 @@ services:
     image: postgres:16-alpine3.18
     restart: unless-stopped
     command: -p ${DB_PORT}
-    env_file: .env
+    # env_file: .env
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
