@@ -19,6 +19,19 @@ services:
     networks: 
       - unipopular
 
+  backend:
+    container_name: backend
+    image: backend
+    build:
+      context: ./backend
+      dockerfile: backend.dockerfile
+    ports:
+      - 4000:4000
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+    networks: 
+      - unipopular
+      
   postgres:
     container_name: DB
     image: postgres:16-alpine3.18
@@ -34,6 +47,18 @@ services:
       - ./datadb/dump:/dump
     ports: 
       - ${DB_PORT}:${DB_PORT}
+    networks: 
+      - unipopular
+
+  pgadmin:
+    image: dpage/pgadmin4:8.5
+    container_name: bdd_pg_admin
+    restart: always
+    environment:
+        PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+        PGADMIN_DEFAULT_PASSWORD: admin123
+    ports:
+        - "5050:80"
     networks: 
       - unipopular
 
