@@ -2,7 +2,7 @@ version: "3"
 services:
   web:
     container_name: SIGBAS-UnvPop
-    image: node:18-alpine
+    image: node:18.18-alpine3.17
     restart: unless-stopped
     working_dir: /usr/src/app
     command: sh -c "yarn install && yarn run dev"
